@@ -1,3 +1,5 @@
+require 'redcarpet'
+
 module MarkdownHelper
 
   class Markdown

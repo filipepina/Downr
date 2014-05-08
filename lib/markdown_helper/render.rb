@@ -1,4 +1,5 @@
 require 'pygmentize'
+require 'redcarpet'
 
 module MarkdownHelper
   # This class wraps both pygmentize and
