@@ -1,5 +1,4 @@
 require "markdown_helper/version"
-require 'markdown_helper/action_view/helpers'
 require 'markdown_helper/railtie' if defined?(::Rails)
 
 module MarkdownHelper
