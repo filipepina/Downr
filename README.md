@@ -1,4 +1,4 @@
-# MarkdownHelper
+# MarkdownHelper [![Build Status](https://travis-ci.org/davidrivera/MarkdownHelper.svg?branch=master)](https://travis-ci.org/davidrivera/MarkdownHelper)
 
 TODO: Write a gem description
 
