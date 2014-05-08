@@ -1,5 +1,12 @@
 require "markdown_helper/version"
-require 'markdown_helper/railtie' if defined?(::Rails)
+require 'markdown_helper/render'
+require 'markdown_helper/configuration'
+require 'markdown_helper/markdown'
+
+if defined?(::Rails)
+  require 'markdown_helper/action_view/helpers'
+  require 'markdown_helper/railtie' 
+end
 
 module MarkdownHelper
   # Your code goes here...

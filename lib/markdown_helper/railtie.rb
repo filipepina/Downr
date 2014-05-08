@@ -1,4 +1,4 @@
-require 'markdown_helper/action_view/helpers'
+# require 'markdown_helper/action_view/helpers'
 
 module MarkdownHelper
 	class Railtie < ::Rails::Railtie
