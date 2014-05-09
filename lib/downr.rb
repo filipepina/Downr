@@ -1,14 +1,14 @@
-require "markdown_helper/version"
-require 'markdown_helper/render'
-require 'markdown_helper/configuration'
-require 'markdown_helper/markdown'
+require "downr/version"
+require 'downr/render'
+require 'downr/configuration'
+require 'downr/markdown'
 
 if defined?(::Rails)
-  require 'markdown_helper/action_view/helpers'
-  require 'markdown_helper/railtie' 
+  require 'downr/action_view/helpers'
+  require 'downr/railtie' 
 end
 
-module MarkdownHelper
+module Downr
   # Your code goes here...
   class << self
     attr_accessor :configuration, :markdown

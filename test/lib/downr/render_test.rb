@@ -1,11 +1,11 @@
 require_relative '../../test_helper'
 
-describe MarkdownHelper::Render do 
-  subject { MarkdownHelper::Render }
+describe Downr::Render do 
+  subject { Downr::Render }
 
   describe "functions" do
     before do
-      @a = MarkdownHelper::Render.new
+      @a = Downr::Render.new
     end
     
     it "must have block_code" do

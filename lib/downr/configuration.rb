@@ -1,4 +1,4 @@
-module MarkdownHelper
+module Downr
 
   class Configuration
     @@options

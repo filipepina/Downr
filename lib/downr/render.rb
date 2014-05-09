@@ -1,7 +1,7 @@
 require 'pygmentize'
 require 'redcarpet'
 
-module MarkdownHelper
+module Downr
   # This class wraps both pygmentize and
   # RailsEmoji gems to create a custom renderer
   class Render < Redcarpet::Render::HTML

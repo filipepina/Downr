@@ -1,4 +1,4 @@
-# MarkdownHelper [![Build Status](https://travis-ci.org/davidrivera/MarkdownHelper.svg?branch=master)](https://travis-ci.org/davidrivera/MarkdownHelper)
+# Downr [![Build Status](https://travis-ci.org/davidrivera/MarkdownHelper.svg?branch=master)](https://travis-ci.org/davidrivera/Downr)
 
 Simple Rails gem wrapper for RedCarpet, Pygmentize, and Emoji giving you a fun cool markdown renderer with all the fixin's 
 
@@ -6,7 +6,7 @@ Simple Rails gem wrapper for RedCarpet, Pygmentize, and Emoji giving you a fun c
 
 Add this line to your application's Gemfile:
 
-    gem 'markdown_helper'
+    gem 'downr'
 
 And then execute:
 
@@ -14,19 +14,19 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install markdown_helper
+    $ gem install downr
 
 after run 
     
-    $ rails g markdown_helper:install
+    $ rails g downr:install
 
 this will create an initializer in 
     
-    config/initializer/markdown_helper.rb
+    config/initializer/downr.rb
 
 ## Usage
 
-Crack open the initializer `config/initializers/markdown_helper.rb` and add/change any configuration options for the markdown rendering process. These options are passed straight to RedCarpet so you can head over there to check out all of the possible options.
+Crack open the initializer `config/initializers/downr.rb` and add/change any configuration options for the markdown rendering process. These options are passed straight to RedCarpet so you can head over there to check out all of the possible options.
 
 ### View Helpers
 
@@ -42,7 +42,7 @@ Just fork and run `rake`
 
 ## Contributing
 
-1. Fork it ( http://github.com/davidrivera/markdown_helper/fork )
+1. Fork it ( http://github.com/davidrivera/downr/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

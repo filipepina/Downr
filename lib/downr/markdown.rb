@@ -1,6 +1,6 @@
 require 'redcarpet'
 
-module MarkdownHelper
+module Downr
 
   class Markdown
     @@renderer
@@ -8,7 +8,7 @@ module MarkdownHelper
     attr_accessor :renderer
 
     def initialize
-      options = MarkdownHelper.configuration.options
+      options = Downr.configuration.options
       render  = Render.new
 
       @@renderer = Redcarpet::Markdown.new(render, options)

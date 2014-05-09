@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'markdown_helper/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "markdown_helper"
-  spec.version       = MarkdownHelper::VERSION
+  spec.name          = "downr"
+  spec.version       = Downr::VERSION
   spec.authors       = ["David Rivera"]
   spec.email         = ["david.r.rivera193@gmail.com"]
   spec.summary       = %q{Custom wrapper for RedCarpet}

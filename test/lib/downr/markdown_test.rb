@@ -1,11 +1,11 @@
 require_relative '../../test_helper'
 
-describe MarkdownHelper::Markdown do 
-  subject { MarkdownHelper::Markdown }
+describe Downr::Markdown do 
+  subject { Downr::Markdown }
 
   describe "Object itself" do
     it "must be initialized" do
-      a = MarkdownHelper::Markdown.new
+      a = Downr::Markdown.new
       a.wont_be_nil
     end
   end
@@ -17,7 +17,7 @@ describe MarkdownHelper::Markdown do
     end
 
     it "must render markdown" do
-      a = MarkdownHelper::Markdown.render("# hello")
+      a = Downr::Markdown.render("# hello")
       assert_equal "<h1>hello</h1>\n", a
     end
   end

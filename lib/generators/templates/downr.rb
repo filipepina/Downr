@@ -1,4 +1,4 @@
-MarkdownHelper.configure do |config|
+Downr.configure do |config|
   config.options = {
     no_intra_emphasis:              true,
 
