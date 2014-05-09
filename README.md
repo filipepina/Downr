@@ -1,6 +1,6 @@
 # MarkdownHelper [![Build Status](https://travis-ci.org/davidrivera/MarkdownHelper.svg?branch=master)](https://travis-ci.org/davidrivera/MarkdownHelper)
 
-Simple Rails gem wrapper for RedCarpet,Pygmentize, and Emoji giving you a fun cool markdown renderer with all the fixins' 
+Simple Rails gem wrapper for RedCarpet, Pygmentize, and Emoji giving you a fun cool markdown renderer with all the fixins' 
 
 ## Installation
 
@@ -15,6 +15,14 @@ And then execute:
 Or install it yourself as:
 
     $ gem install markdown_helper
+
+after run 
+    
+    $ rails g markdown_helper:install
+
+this will create an initializer in 
+    
+    config/initializer/markdown_helper.rb
 
 ## Usage
 
