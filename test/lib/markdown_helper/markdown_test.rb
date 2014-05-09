@@ -16,11 +16,6 @@ describe MarkdownHelper::Markdown do
       subject.must_respond_to(:render)
     end
 
-    it "must have a Redcarpet" do
-      a = MarkdownHelper::Markdown.new
-      a.renderer.must_be_instance_of(Redcarpet::Markdown)
-    end
-
     it "must render markdown" do
       a = MarkdownHelper::Markdown.render("# hello")
       assert_equal "<h1>hello</h1>\n", a
