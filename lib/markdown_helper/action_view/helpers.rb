@@ -1,5 +1,5 @@
 module MarkdownHelper
-  class Helpers < ActionView::Helpers::Helpers
+  module Helpers
     def render_markdown(html)
       MarkdownHelper::Markdown.render(html).html_safe
     end
