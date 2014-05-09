@@ -8,8 +8,8 @@ describe MarkdownHelper::Render do
       subject.must_respond_to(:block_code)
     end
 
-    it "must have paragrah"
-      subject.must_respond_to(:paragrah)
+    it "must have paragrah" do
+      subject.must_respond_to(:paragraph)
     end
   end
 end
