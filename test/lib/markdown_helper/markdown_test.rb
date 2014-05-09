@@ -3,9 +3,6 @@ require_relative '../../test_helper'
 describe MarkdownHelper::Markdown do 
   subject { MarkdownHelper::Markdown }
 
-  before do
-    MarkdownHelper.configure
-  end
   describe "Object iteself" do
     it "must exist" do
       a = MarkdownHelper::Markdown.new
