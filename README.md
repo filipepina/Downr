@@ -20,6 +20,14 @@ Or install it yourself as:
 
 Crack open the initializer `config/initializers/markdown_helper.rb` and add/change any configuration options for the markdown rendering process. These options are passed straight to RedCarpet so you can head over there to check out all of the possible options.
 
+### View Helpers
+
+`render_markdown "# Hello World"`
+
+### Or use directly
+
+`MarkdownHelper::Markdown.render("# Hello World")`
+
 ## Tests
 
 Just fork and run `rake`
