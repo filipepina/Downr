@@ -1,6 +1,6 @@
 # MarkdownHelper [![Build Status](https://travis-ci.org/davidrivera/MarkdownHelper.svg?branch=master)](https://travis-ci.org/davidrivera/MarkdownHelper)
 
-TODO: Write a gem description
+Simple wrapper for RedCarpet,Pygmentize, and Emoji giving you a fun cool markdown renderer with all the fixins' 
 
 ## Installation
 
@@ -18,11 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Crack open the initializer `config/initializers/markdown_helper.rb` and add/change any configuration options for the markdown rendering process. These options are passed straight to RedCarpet so you can head over there to check out all of the possible options.
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/markdown_helper/fork )
+1. Fork it ( http://github.com/davidrivera/markdown_helper/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
