@@ -20,6 +20,10 @@ Or install it yourself as:
 
 Crack open the initializer `config/initializers/markdown_helper.rb` and add/change any configuration options for the markdown rendering process. These options are passed straight to RedCarpet so you can head over there to check out all of the possible options.
 
+## Tests
+
+Just fork and run `rake`
+
 ## Contributing
 
 1. Fork it ( http://github.com/davidrivera/markdown_helper/fork )
@@ -27,3 +31,7 @@ Crack open the initializer `config/initializers/markdown_helper.rb` and add/chan
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+MIT
