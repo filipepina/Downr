@@ -7,7 +7,7 @@ module MarkdownHelper
 
     def initialize
       options = MarkdownHelper.configuration.options
-      render  = HTMLRender.new
+      render  = Render.new
 
       @@renderer = Redcarpet::Markdown.new(render, options)
     end
