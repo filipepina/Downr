@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["david.r.rivera193@gmail.com"]
   spec.summary       = %q{Custom wrapper for RedCarpet}
   spec.description   = %q{Wrapper for RedCarpet, adding syntax highlighting, emojis etc.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/davidrivera/Downr"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
