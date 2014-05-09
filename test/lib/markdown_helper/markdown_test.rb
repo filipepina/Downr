@@ -17,7 +17,8 @@ describe MarkdownHelper::Markdown do
     end
 
     it "must have a Redcarpet" do
-      subject.renderer.must_be_instance_of(Object)
+      a = MarkdownHelper::Markdown.new
+      a.renderer.must_be_instance_of(Redcarpet::Markdown)
     end
 
     it "must render markdown" do

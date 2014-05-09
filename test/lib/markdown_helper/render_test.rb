@@ -4,12 +4,16 @@ describe MarkdownHelper::Render do
   subject { MarkdownHelper::Render }
 
   describe "functions" do
+    before do
+      @a = MarkdownHelper::Render.new
+    end
+    
     it "must have block_code" do
-      subject.must_respond_to(:block_code)
+      @a.must_respond_to(:block_code)
     end
 
     it "must have paragrah" do
-      subject.must_respond_to(:paragraph)
+      @a.must_respond_to(:paragraph)
     end
   end
 end

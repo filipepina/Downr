@@ -5,6 +5,8 @@ module MarkdownHelper
   class Markdown
     @@renderer
 
+    attr_accessor :renderer
+
     def initialize
       options = MarkdownHelper.configuration.options
       render  = Render.new

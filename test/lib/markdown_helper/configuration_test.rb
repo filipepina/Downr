@@ -5,7 +5,7 @@ describe MarkdownHelper::Configuration do
 
   describe "configuration" do
     it "must have options" do
-      subject.options.wont_be_nil
+      MarkdownHelper.configuration.options.wont_be_nil
     end
   end
 end
