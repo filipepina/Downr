@@ -33,7 +33,7 @@ Crack open the initializer `config/initializers/downr.rb` and add/change any con
 
 ### Or use directly
 
-`MarkdownHelper::Markdown.render("# Hello World")`
+`Downr::Markdown.render("# Hello World")`
 
 ## Tests
 
