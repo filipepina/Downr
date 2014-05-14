@@ -1,4 +1,4 @@
-# Downr [![Build Status](https://travis-ci.org/davidrivera/Downr.svg?branch=master)](https://travis-ci.org/davidrivera/Downr)[![Code Climate](https://codeclimate.com/github/davidrivera/Downr.png)](https://codeclimate.com/github/davidrivera/Downr)
+# Downr [![Build Status](https://travis-ci.org/davidrivera/Downr.svg?branch=master)](https://travis-ci.org/davidrivera/Downr) [![Code Climate](https://codeclimate.com/github/davidrivera/Downr.png)](https://codeclimate.com/github/davidrivera/Downr)
 Simple Rails gem wrapper for RedCarpet, Pygmentize, and Emoji giving you a fun cool markdown renderer with all the fixin's 
 
 ## Installation
