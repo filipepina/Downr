@@ -13,9 +13,11 @@ if defined?(::Rails)
   require 'downr/railtie' 
 end
 
+# Namespace for classes and modules that handle markdown parsing
 module Downr
 
-  # Make some stuff accessible 
+  # @attr [Configuration] configuration the configuration used for initializing the parser
+  # @attr [Markdown] markdown the markdown object created from the configuration
   class << self
     attr_accessor :configuration, :markdown
   end

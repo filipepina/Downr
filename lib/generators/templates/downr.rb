@@ -3,7 +3,7 @@ Downr.configure do |config|
 
     ########################################################
     # 
-    #  Custom
+    #  Downr options
     #  
     ########################################################
     # use pygmentize to colorize code segments
@@ -12,6 +12,11 @@ Downr.configure do |config|
     # use emojify for icons
     emojify:                        true,
 
+    ########################################################
+    # The following options are for Redcarpet and can be found at
+    # https://github.com/vmg/redcarpet
+    ########################################################
+    #
     ########################################################
     # 
     #  Extensions
