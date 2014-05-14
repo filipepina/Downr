@@ -1,11 +1,3 @@
-require 'pygmentize'
-require 'redcarpet'
-
-require "downr/version"
-require 'downr/render'
-require 'downr/configuration'
-require 'downr/markdown'
-
 # Don't include the view helpers if not
 # being used with rails
 if defined?(::Rails)
@@ -15,6 +7,12 @@ end
 
 # Namespace for classes and modules that handle markdown parsing
 module Downr
+
+  autoload :Pygmentize,     'pygmentize'
+  autoload :Redcarpet,      'redcarpet'
+  autoload :Render,         'downr/render'
+  autoload :Configuration,  'downr/configuration'
+  autoload :Markdown,       'downr/markdown'
 
   # @attr [Configuration] configuration the configuration used for initializing the parser
   # @attr [Markdown] markdown the markdown object created from the configuration
