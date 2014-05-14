@@ -1,7 +1,7 @@
 # Downr 
 [![Build Status](https://travis-ci.org/davidrivera/Downr.svg?branch=master)](https://travis-ci.org/davidrivera/Downr) [![Code Climate](https://codeclimate.com/github/davidrivera/Downr.png)](https://codeclimate.com/github/davidrivera/Downr) [![Gem Version](https://badge.fury.io/rb/downr.svg)](http://badge.fury.io/rb/downr) [![Dependency Status](https://gemnasium.com/davidrivera/Downr.svg)](https://gemnasium.com/davidrivera/Downr)
 
-Downr is an easy to use wrapper around a couple of different notible gems
+Downr is an easy to use rails wrapper around a couple of different notible gems
 * [Redcarpet](https://github.com/vmg/redcarpet)
 * [Pygmentize](https://github.com/djanowski/pygmentize)
 * [Emoji](https://github.com/jsw0528/rails_emoji)
