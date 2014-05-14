@@ -1,5 +1,8 @@
 module Downr
 
+  ##
+  # Container object for options
+  # parsed by initializer
   class Configuration
     @@options
 
