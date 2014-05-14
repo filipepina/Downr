@@ -1,3 +1,6 @@
+require 'pygmentize'
+require 'redcarpet'
+
 require "downr/version"
 require 'downr/render'
 require 'downr/configuration'

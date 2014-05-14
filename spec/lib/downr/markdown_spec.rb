@@ -9,13 +9,7 @@ describe Downr::Markdown do
 
   it { should respond_to(:renderer) }
 
-  context "creating" do
-    context "when configuration options are specified" do
-      it "uses those options" do
-        a = Downr::Markdown.new
-        a.stub(:render).and_return("hello")
-        a.render.should eq("hello")
-      end
-    end
+  it "should have a render method" do
+    Downr::Markdown.should respond_to(:render)
   end
 end

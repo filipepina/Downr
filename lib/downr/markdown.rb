@@ -19,7 +19,8 @@ module Downr
     #
     def initialize
       options = Downr.configuration.options
-      render  = Render.new
+      
+      render  = Render.new(options)
 
       @@renderer = Redcarpet::Markdown.new(render, options)
     end

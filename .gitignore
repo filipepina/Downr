@@ -16,3 +16,7 @@ test/tmp
 test/version_tmp
 tmp
 vendor
+
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
