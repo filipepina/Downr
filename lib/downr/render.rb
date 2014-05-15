@@ -10,6 +10,7 @@ module Downr
     def initialize(opt)
       opt = clean_options(opt)
       @options = opt
+      super
     end
 
     # Hook for Redcarpet render 
