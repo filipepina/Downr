@@ -32,7 +32,7 @@ module Downr
     # 
     # @return [String] html
     def paragraph(text)
-      if(@options{[:emojify])
+      if(@options[:emojify])
         return emojify(text)
       else
         return text
