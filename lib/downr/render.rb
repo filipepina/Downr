@@ -7,8 +7,8 @@ module Downr
     # 
     # @option opts [Boolean] :pygmentize Code colors
     # @option opts [Boolean] :emojify Icons
-    def initializer(opt)
-      opt = clean_options
+    def initialize(opt)
+      opt = clean_options(opt)
       @options = opt
     end
 
