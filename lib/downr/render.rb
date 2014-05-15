@@ -63,7 +63,7 @@ module Downr
           a[:emojify] = false
         end
         
-        return opts
+        return a
       end
 
       # Uses RailsEmoji to insert icons
