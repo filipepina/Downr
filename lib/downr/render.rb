@@ -19,7 +19,7 @@ module Downr
     # 
     # @return [String] html
     def block_code(code, language)
-      if(@options.pygmentize)
+      if(@options[:pygmentize])
         pygmentize(code, language)
       else
         return code
@@ -32,7 +32,7 @@ module Downr
     # 
     # @return [String] html
     def paragraph(text)
-      if(@options.emojify)
+      if(@options{[:emojify])
         return emojify(text)
       else
         return text
@@ -51,14 +51,14 @@ module Downr
       def clean_options opts
         a = {}
 
-        if(opts.has_key?(pygmentize))
-          a[:pygmentize] = opts.pygmentize
+        if(opts.has_key?(:pygmentize))
+          a[:pygmentize] = opts[:pygmentize]
         else
           a[:pygmentize] = false
         end
 
-        if(opts.has_key?(emojify))
-          a[:emojify] = opts.emojify
+        if(opts.has_key?(:emojify))
+          a[:emojify] = opts[:emojify]
         else
           a[:emojify] = false
         end
