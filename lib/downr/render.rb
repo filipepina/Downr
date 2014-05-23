@@ -2,6 +2,7 @@ module Downr
   # This class wraps both pygmentize and
   # RailsEmoji gems to create a custom renderer
   class Render < Redcarpet::Render::HTML
+    include Redcarpet::Render::SmartyPants
 
     # Initializes the Render object
     # 
@@ -27,16 +28,16 @@ module Downr
       end
     end
 
-    # Hook for Redcarpet render 
-    # 
-    # @param [String] text the p block
+    # Emojify content before we do anything else
+    #
+    # @params [String] full_document the full document
     # 
     # @return [String] html
-    def paragraph(text)
+    def preprocess(full_document)
       if(@options[:emojify])
-        return emojify(text)
+        return emojify(full_document)
       else
-        return text
+        return full_document
       end
     end
 
