@@ -78,7 +78,7 @@ module Downr
       def emojify(content)
         content.to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
           RailsEmoji.render match, size: '20x20'
-        end.html_safe if content.present?
+        end
       end
 
       #Uses Pygmentize to color code
