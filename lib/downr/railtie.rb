@@ -1,6 +1,5 @@
 module Downr
 
-  ##
   # Lets us tie up a Rails view helper
   class Railtie < ::Rails::Railtie
     initializer "downr.configure_view_controller" do |app|

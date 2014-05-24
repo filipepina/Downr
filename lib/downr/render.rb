@@ -30,41 +30,26 @@ module Downr
     # @return [String] html
     def block_code(code, language)
       if(@options[:pygmentize])
-        pygmentize(code, language)
+        return pygmentize(code, language)
       end
 
       code
     end
 
-    # Hoock for Redcarpet render
-    #
-    # @param [String] head the heading text
-    # @param [int] level the heading level
-    #
-    # @return [String] html
-    def header(head, level)
-      handle_emoji(head, level)
-    end
+    # Pre/post-process
 
-    # Hoock for Redcarpet render
-    #
-    # @param [String] text the paragraph text
-    #
+    # Hook for Redcarpet render 
+    # 
+    # @param [String] full_document the complete doc
+    # 
     # @return [String] html
-    def paragraph(text)
-      handle_emoji(text)
-    end
+    def postprocess(full_document)
+      if(@options[:emojify])
+        return emojify(full_document)
+      end
 
-    # Hoock for Redcarpet render
-    #
-    # @param [String] content the content of the list
-    # @param [String] list_type the type of list
-    #
-    # @return [String] html
-    def list(contents,  list_type)
-      handle_emoji(contents)
+      full_document
     end
-
 
     private
       # Ensures we have options defined
@@ -106,19 +91,15 @@ module Downr
         Pygmentize.process(code, language)
       end
 
-      # wrapper for Emojifyer so we do keep 
-      # checking options everywhere
+      # Renders emojis by parsing the string
       #
-      # @param [String] text the text to emojify
-      # @param [int] level the level/size to render the image default to 5 
-      #
-      # @return [String] html
-      def handle_emoji(text, level=5)
-        if(@options[:emojify])
-          return Emojifyer.emojify(text, level)
+      # @param [String] content the content to parse
+      # 
+      # @return [String] html  
+      def emojify(content)
+        content.to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
+          RailsEmoji.render match, size: '20x20'
         end
-      
-        text
       end
   end
 end

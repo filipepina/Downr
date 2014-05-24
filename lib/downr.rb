@@ -12,7 +12,6 @@ module Downr
   autoload :Pygmentize,     'pygmentize'
   autoload :Redcarpet,      'redcarpet'
   autoload :RailsEmoji,     'rails_emoji'
-  autoload :Emojifyer,      'downr/emojifyer'
   autoload :Render,         'downr/render'
   autoload :Configuration,  'downr/configuration'
   autoload :Markdown,       'downr/markdown'
