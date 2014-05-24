@@ -3,6 +3,7 @@
 if defined?(::Rails)
   require 'downr/action_view/helpers'
   require 'downr/railtie' 
+  require 'downr/engine'
 end
 
 # Namespace for classes and modules that handle markdown parsing
