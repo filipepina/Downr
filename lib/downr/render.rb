@@ -1,7 +1,12 @@
 module Downr
+
   # This class wraps both pygmentize and
   # RailsEmoji gems to create a custom renderer
   class Render < Redcarpet::Render::HTML
+
+    # will override the postprocess method to 
+    # perform SmartyPants replacements once 
+    # the rendering is complete.
     include Redcarpet::Render::SmartyPants
 
     # Initializes the Render object
@@ -13,6 +18,9 @@ module Downr
       @options = opt
       super
     end
+
+
+    # Block-level calls
 
     # Hook for Redcarpet render 
     # 
@@ -28,26 +36,35 @@ module Downr
       code
     end
 
+    # Hoock for Redcarpet render
+    #
+    # @param [String] head the heading text
+    # @param [int] level the heading level
+    #
+    # @return [String] html
     def header(head, level)
-      if(@options[:emojify])
-        return Emojifyer.emojify(head, level)
-      end
-      
-      head
+      handle_emoji(head, level)
     end
 
-    # Emojify content before we do anything else
+    # Hoock for Redcarpet render
     #
-    # @params [String] full_document the full document
-    # 
+    # @param [String] text the paragraph text
+    #
     # @return [String] html
-    def postprocess(full_document)
-      if(@options[:emojify])
-        return Emojifyer.emojify(full_document)
-      end
-      
-      full_document
+    def paragraph(text)
+      handle_emoji(text)
     end
+
+    # Hoock for Redcarpet render
+    #
+    # @param [String] content the content of the list
+    # @param [String] list_type the type of list
+    #
+    # @return [String] html
+    def list(contents,  list_type)
+      handle_emoji(contents)
+    end
+
 
     private
       # Ensures we have options defined
@@ -76,19 +93,6 @@ module Downr
         return a
       end
 
-      # Uses RailsEmoji to insert icons
-      # 
-      # @private
-      # 
-      # @param [String] content the string to parse
-      # 
-      # @return [String] with icons
-      def emojify(content)
-        content.to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
-          RailsEmoji.render match, size: '20x20'
-        end
-      end
-
       #Uses Pygmentize to color code
       #
       # @private
@@ -100,6 +104,21 @@ module Downr
       def pygmentize(code, language)
         language = language.nil? ? :sh : language
         Pygmentize.process(code, language)
+      end
+
+      # wrapper for Emojifyer so we do keep 
+      # checking options everywhere
+      #
+      # @param [String] text the text to emojify
+      # @param [int] level the level/size to render the image default to 5 
+      #
+      # @return [String] html
+      def handle_emoji(text, level=5)
+        if(@options[:emojify])
+          return Emojifyer.emojify(text, level)
+        end
+      
+        text
       end
   end
 end
