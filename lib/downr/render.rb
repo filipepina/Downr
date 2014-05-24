@@ -23,9 +23,17 @@ module Downr
     def block_code(code, language)
       if(@options[:pygmentize])
         pygmentize(code, language)
-      else
-        return code
       end
+
+      code
+    end
+
+    def header(head, level)
+      if(@options[:emojify])
+        return Emojifyer.emojify(head, level)
+      end
+      
+      head
     end
 
     # Emojify content before we do anything else
@@ -33,12 +41,12 @@ module Downr
     # @params [String] full_document the full document
     # 
     # @return [String] html
-    def preprocess(full_document)
+    def postprocess(full_document)
       if(@options[:emojify])
-        return emojify(full_document)
-      else
-        return full_document
+        return Emojifyer.emojify(full_document)
       end
+      
+      full_document
     end
 
     private

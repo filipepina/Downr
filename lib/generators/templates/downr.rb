@@ -1,3 +1,4 @@
+# Downr configuration
 Downr.configure do |config|
   config.options = {
 
