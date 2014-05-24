@@ -78,6 +78,19 @@ module Downr
         return a
       end
 
+      # Uses RailsEmoji to insert icons
+      # 
+      # @private
+      # 
+      # @param [String] content the string to parse
+      # 
+      # @return [String] with icons
+      def emojify(content)
+        content.to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
+          RailsEmoji.render match, size: '20x20'
+        end
+      end
+
       #Uses Pygmentize to color code
       #
       # @private
@@ -89,17 +102,6 @@ module Downr
       def pygmentize(code, language)
         language = language.nil? ? :sh : language
         Pygmentize.process(code, language)
-      end
-
-      # Renders emojis by parsing the string
-      #
-      # @param [String] content the content to parse
-      # 
-      # @return [String] html  
-      def emojify(content)
-        content.to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
-          RailsEmoji.render match, size: '20x20'
-        end
       end
   end
 end
