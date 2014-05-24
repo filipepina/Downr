@@ -5,5 +5,5 @@ describe Downr::Render do
     Downr::Render.any_instance.stub(:initialize).and_return(Downr::Render.new({}))
   end
   it{ should respond_to(:block_code) }
-  it{ should respond_to(:paragraph) }
+  it{ should respond_to(:postprocess) }
 end
