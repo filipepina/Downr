@@ -1,4 +1,8 @@
 # Downr configuration
+#
+# @yield configuration for Downr
+# @yieldparam config
+# @yieldreturn config
 Downr.configure do |config|
   config.options = {
 

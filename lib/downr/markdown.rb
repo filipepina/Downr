@@ -1,5 +1,3 @@
-require 'redcarpet'
-
 module Downr
 
   # This class is a wrapper for the
@@ -7,6 +5,7 @@ module Downr
   #
   # @attr [Redcarpet::Markdown] renderer 
   class Markdown
+    # static renderer
     @@renderer
 
     attr_accessor :renderer
