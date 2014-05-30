@@ -16,8 +16,8 @@ module Downr
   autoload :Configuration,  'downr/configuration'
   autoload :Markdown,       'downr/markdown'
 
-  # @attr [Configuration] configuration the configuration used for initializing the parser
-  # @attr [Markdown] markdown the markdown object created from the configuration
+  # @attr Configuration configuration the configuration used for initializing the parser
+  # @attr Markdown markdown the markdown object created from the configuration
   class << self
     attr_accessor :configuration, :markdown
   end
