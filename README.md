@@ -1,5 +1,5 @@
 # Downr 
-[![Build Status](https://travis-ci.org/davidrivera/Downr.svg?branch=master)](https://travis-ci.org/davidrivera/Downr) [![Code Climate](https://codeclimate.com/github/davidrivera/Downr.png)](https://codeclimate.com/github/davidrivera/Downr) [![Inline docs](http://inch-pages.github.io/github/davidrivera/Downr.png)](http://inch-pages.github.io/github/davidrivera/Downr) [![Gem Version](https://badge.fury.io/rb/downr.svg)](http://badge.fury.io/rb/downr) [![Dependency Status](https://gemnasium.com/davidrivera/Downr.svg)](https://gemnasium.com/davidrivera/Downr)
+[![Build Status](https://travis-ci.org/davidrivera/Downr.svg?branch=master)](https://travis-ci.org/davidrivera/Downr) [![Code Climate](https://codeclimate.com/github/davidrivera/Downr.png)](https://codeclimate.com/github/davidrivera/Downr) [![Inline docs](http://inch-ci.org/github/davidrivera/Downr.png)](http://inch-ci.org/github/davidrivera/Downr) [![Gem Version](https://badge.fury.io/rb/downr.svg)](http://badge.fury.io/rb/downr) [![Dependency Status](https://gemnasium.com/davidrivera/Downr.svg)](https://gemnasium.com/davidrivera/Downr)
 
 Downr is an easy to use rails wrapper around a couple of different notable gems
 * [Redcarpet](https://github.com/vmg/redcarpet)
