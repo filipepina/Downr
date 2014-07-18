@@ -17,6 +17,9 @@ Downr.configure do |config|
     # use emojify for icons
     emojify:                        true,
 
+    # should we strip out "unsafe" html elements
+    html_sanitization:              true,
+
     ########################################################
     # The following options are for Redcarpet and can be found at
     # https://github.com/vmg/redcarpet

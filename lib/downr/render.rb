@@ -43,12 +43,12 @@ module Downr
     # @param [String] full_document the complete doc
     # 
     # @return [String] html
-    def postprocess(full_document)
+    def preprocess(full_document)
       if(@options[:emojify])
         return emojify(full_document)
       end
 
-      full_document
+      super full_document
     end
 
     private
