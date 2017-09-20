@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'downr/version'
 
 describe Downr do  
   it "must have a version" do
