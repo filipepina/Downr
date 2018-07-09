@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "yard"
 
   spec.add_dependency 'rails', '>= 3.1.0'
-  spec.add_dependency "rails_emoji", "~> 1.7.1"
+  spec.add_dependency "rails_emoji", "~> 1.8.0"
   spec.add_dependency "pygmentize", "~>0.0.3" 
   spec.add_dependency "redcarpet", "~>3.4.0"
   spec.add_dependency "html-pipeline", "~> 1.9.0"
